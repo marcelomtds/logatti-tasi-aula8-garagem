@@ -4,6 +4,7 @@ namespace Model
 {
     public class Atendimento
     {
+        public int Id { get; set; }
         public Cliente Cliente { get; set; }
         public Carro Carro { get; set; }
         public DateTime Data { get; set; }

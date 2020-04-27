@@ -3,3 +3,8 @@ C:\projetos\logatti\csharp\Aula8Garagem\Aula8Garagem\Model\bin\Debug\Model.pdb
 C:\projetos\logatti\csharp\Aula8Garagem\Aula8Garagem\Model\obj\Debug\Model.csprojAssemblyReference.cache
 C:\projetos\logatti\csharp\Aula8Garagem\Aula8Garagem\Model\obj\Debug\Model.dll
 C:\projetos\logatti\csharp\Aula8Garagem\Aula8Garagem\Model\obj\Debug\Model.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Model\bin\Debug\Model.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Model\bin\Debug\Model.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\projetos\logatti\csharp\Aula8Garagem\Model\obj\Debug\Model.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Model\obj\Debug\Model.pdb

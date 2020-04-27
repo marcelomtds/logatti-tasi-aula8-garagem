@@ -1,0 +1,15 @@
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Formulario.exe.config
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Formulario.exe
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Formulario.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.csprojAssemblyReference.cache
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.Properties.Resources.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.csproj.GenerateResource.cache
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.exe
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.ClienteForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Dados.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Model.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Dados.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Model.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.csproj.CopyComplete
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.MenuForm.resources

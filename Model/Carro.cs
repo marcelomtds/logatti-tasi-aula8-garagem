@@ -10,5 +10,6 @@
         public int AnoFabricacao { get; set; }
         public int AnoModelo { get; set; }
         public Motor Motor { get; set; }
+        public Garagem garagem { get; set; }
     }
 }

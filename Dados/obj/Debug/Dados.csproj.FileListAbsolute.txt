@@ -1,0 +1,5 @@
+C:\projetos\logatti\csharp\Aula8Garagem\Dados\bin\Debug\Dados.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Dados\bin\Debug\Dados.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Dados\obj\Debug\Dados.csprojAssemblyReference.cache
+C:\projetos\logatti\csharp\Aula8Garagem\Dados\obj\Debug\Dados.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Dados\obj\Debug\Dados.pdb
