@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gerenciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // gerenciarToolStripMenuItem
             // 
             this.gerenciarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemMenuCliente});
+            this.itemMenuCliente,
+            this.itemMenuFuncionario});
             this.gerenciarToolStripMenuItem.Name = "gerenciarToolStripMenuItem";
             this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.gerenciarToolStripMenuItem.Text = "Gerenciar";
@@ -55,9 +57,16 @@
             // itemMenuCliente
             // 
             this.itemMenuCliente.Name = "itemMenuCliente";
-            this.itemMenuCliente.Size = new System.Drawing.Size(111, 22);
+            this.itemMenuCliente.Size = new System.Drawing.Size(180, 22);
             this.itemMenuCliente.Text = "Cliente";
             this.itemMenuCliente.Click += new System.EventHandler(this.itemMenuCliente_Click);
+            // 
+            // itemMenuFuncionario
+            // 
+            this.itemMenuFuncionario.Name = "itemMenuFuncionario";
+            this.itemMenuFuncionario.Size = new System.Drawing.Size(180, 22);
+            this.itemMenuFuncionario.Text = "Funcionario";
+            this.itemMenuFuncionario.Click += new System.EventHandler(this.itemMenuFuncionario_Click);
             // 
             // MenuForm
             // 
@@ -84,6 +93,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gerenciarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemMenuCliente;
+        private System.Windows.Forms.ToolStripMenuItem itemMenuFuncionario;
     }
 }
 

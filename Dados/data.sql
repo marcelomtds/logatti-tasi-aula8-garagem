@@ -19,7 +19,7 @@ create table funcionario (
 	id int identity (1, 1) not null,
 	nome varchar (100) not null,
 	telefone varchar (15) not null,
-	salario decimal not null,
+	salario decimal (8, 2) not null,
 	constraint pk_funcionario primary key (id),
 	constraint uq_funcionario unique (nome, telefone)
 );

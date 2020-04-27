@@ -32,12 +32,12 @@ namespace Formulario
                 try
                 {
                     Save(cliente);
-                    MessageBox.Show("Cliente salvo com sucesso.");
+                    MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Ocorreu um erro ao salvar o cliente.");
+                    MessageBox.Show($"Ocorreu um erro ao salvar o registro. Erro: {ex.Message}");
                 }
             }
         }

@@ -14,8 +14,17 @@ namespace Formulario
         {
             if (IsClosedForm("ClienteForm"))
             {
-                ClienteForm cliente = new ClienteForm();
-                cliente.Show();
+                ClienteForm form = new ClienteForm();
+                form.Show();
+            }
+        }
+
+        private void itemMenuFuncionario_Click(object sender, EventArgs e)
+        {
+            if (IsClosedForm("FuncionarioForm"))
+            {
+                FuncionarioForm form = new FuncionarioForm();
+                form.Show();
             }
         }
 

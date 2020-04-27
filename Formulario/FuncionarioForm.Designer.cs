@@ -1,6 +1,6 @@
 ﻿namespace Formulario
 {
-    partial class ClienteForm
+    partial class FuncionarioForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gbFuncionario = new System.Windows.Forms.GroupBox();
+            this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.gbDados = new System.Windows.Forms.GroupBox();
+            this.lblSalario = new System.Windows.Forms.Label();
+            this.txtSalario = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.gbFuncionario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.gbDados.SuspendLayout();
-            this.gbCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gbFuncionario
+            // 
+            this.gbFuncionario.Controls.Add(this.dgvFuncionarios);
+            this.gbFuncionario.Location = new System.Drawing.Point(12, 223);
+            this.gbFuncionario.Name = "gbFuncionario";
+            this.gbFuncionario.Size = new System.Drawing.Size(484, 215);
+            this.gbFuncionario.TabIndex = 9;
+            this.gbFuncionario.TabStop = false;
+            this.gbFuncionario.Text = "Funcionários";
+            // 
+            // dgvFuncionarios
+            // 
+            this.dgvFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionarios.Location = new System.Drawing.Point(9, 19);
+            this.dgvFuncionarios.Name = "dgvFuncionarios";
+            this.dgvFuncionarios.ReadOnly = true;
+            this.dgvFuncionarios.Size = new System.Drawing.Size(469, 190);
+            this.dgvFuncionarios.TabIndex = 5;
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(415, 194);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 8;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnListar
+            // 
+            this.btnListar.Location = new System.Drawing.Point(93, 193);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.TabIndex = 7;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(12, 193);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // gbDados
             // 
+            this.gbDados.Controls.Add(this.lblSalario);
+            this.gbDados.Controls.Add(this.txtSalario);
             this.gbDados.Controls.Add(this.lblTelefone);
             this.gbDados.Controls.Add(this.txtTelefone);
             this.gbDados.Controls.Add(this.lblNome);
@@ -55,10 +108,26 @@
             this.gbDados.Controls.Add(this.txtId);
             this.gbDados.Location = new System.Drawing.Point(12, 12);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(417, 174);
-            this.gbDados.TabIndex = 0;
+            this.gbDados.Size = new System.Drawing.Size(484, 174);
+            this.gbDados.TabIndex = 5;
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados";
+            // 
+            // lblSalario
+            // 
+            this.lblSalario.AutoSize = true;
+            this.lblSalario.Location = new System.Drawing.Point(184, 123);
+            this.lblSalario.Name = "lblSalario";
+            this.lblSalario.Size = new System.Drawing.Size(46, 13);
+            this.lblSalario.TabIndex = 7;
+            this.lblSalario.Text = "Salário *";
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(184, 139);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(147, 20);
+            this.txtSalario.TabIndex = 6;
             // 
             // lblTelefone
             // 
@@ -109,61 +178,12 @@
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 193);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 1;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnListar
-            // 
-            this.btnListar.Location = new System.Drawing.Point(93, 193);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(75, 23);
-            this.btnListar.TabIndex = 2;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(354, 193);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 3;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // gbCliente
-            // 
-            this.gbCliente.Controls.Add(this.dgvClientes);
-            this.gbCliente.Location = new System.Drawing.Point(12, 223);
-            this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(417, 215);
-            this.gbCliente.TabIndex = 4;
-            this.gbCliente.TabStop = false;
-            this.gbCliente.Text = "Clientes";
-            // 
-            // dgvClientes
-            // 
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(9, 19);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(402, 190);
-            this.dgvClientes.TabIndex = 5;
-            // 
-            // ClienteForm
+            // FuncionarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 450);
-            this.Controls.Add(this.gbCliente);
+            this.ClientSize = new System.Drawing.Size(508, 450);
+            this.Controls.Add(this.gbFuncionario);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.btnSalvar);
@@ -171,19 +191,24 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ClienteForm";
+            this.Name = "FuncionarioForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cliente";
+            this.Text = "Funcionário";
+            this.gbFuncionario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
             this.gbDados.ResumeLayout(false);
             this.gbDados.PerformLayout();
-            this.gbCliente.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox gbFuncionario;
+        private System.Windows.Forms.DataGridView dgvFuncionarios;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.GroupBox gbDados;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.TextBox txtTelefone;
@@ -191,10 +216,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.GroupBox gbCliente;
-        private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Label lblSalario;
+        private System.Windows.Forms.TextBox txtSalario;
     }
 }
