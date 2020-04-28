@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using System.Windows.Forms;
 using Dados;
 using Model;
 
 namespace Formulario
 {
-    public partial class ClienteForm : Form
+    public partial class GaragemForm : Form
     {
         private DataBase db;
-        public ClienteForm()
+        public GaragemForm()
         {
             InitializeComponent();
         }
@@ -24,14 +23,15 @@ namespace Formulario
             }
             else
             {
-                var cliente = new Cliente
+                var garagem = new Garagem
                 {
+                    CNPJ = txtCNPJ.Text,
                     Nome = txtNome.Text,
                     Telefone = txtTelefone.Text
                 };
                 try
                 {
-                    Save(cliente);
+                    Save(garagem);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -42,32 +42,20 @@ namespace Formulario
             }
         }
 
-        private void btnListar_Click(object sender, EventArgs e)
+        private void Save(Garagem garagem)
         {
-            dgvClientes.DataSource = null;
-            dgvClientes.DataSource = ListAll();
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-            dgvClientes.DataSource = null;
-        }
-
-        private void Save(Cliente cliente)
-        {
-            var sql = $"INSERT INTO CLIENTE (nome, telefone) VALUES ('{cliente.Nome}', '{cliente.Telefone}')";
+            var sql = $"INSERT INTO garagem (cnpj, nome, telefone) VALUES ('{garagem.CNPJ}', '{garagem.Nome}', '{garagem.Telefone}')";
             using (db = new DataBase())
             {
                 db.ExecuteCommand(sql);
             }
         }
 
-        private List<Cliente> ListAll()
+        private List<Garagem> ListAll()
         {
             using (db = new DataBase())
             {
-                var sql = "SELECT id, nome, telefone FROM CLIENTE ORDER BY nome ASC";
+                var sql = "SELECT id, cnpj, nome, telefone FROM garagem ORDER BY nome ASC";
                 var retorno = db.ExecuteCommandWithReturn(sql);
                 return ReadList(retorno);
             }
@@ -75,31 +63,47 @@ namespace Formulario
 
         private bool IsInvalidForm()
         {
-            return string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtTelefone.Text);
+            return string.IsNullOrWhiteSpace(txtCNPJ.Text)
+                || string.IsNullOrWhiteSpace(txtTelefone.Text)
+                || string.IsNullOrWhiteSpace(txtTelefone.Text);
         }
 
         private void ResetForm()
         {
             txtId.Clear();
+            txtCNPJ.Clear();
             txtNome.Clear();
             txtTelefone.Clear();
-            txtNome.Focus();
+            txtCNPJ.Focus();
         }
 
-        private List<Cliente> ReadList(SqlDataReader response)
+        private List<Garagem> ReadList(SqlDataReader response)
         {
-            List<Cliente> clientes = new List<Cliente>();
+            List<Garagem> garagens = new List<Garagem>();
             while (response.Read())
             {
-                var cliente = new Cliente()
+                var garagem = new Garagem()
                 {
                     Id = Convert.ToInt32(response["id"]),
+                    CNPJ = response["cnpj"].ToString(),
                     Nome = response["nome"].ToString(),
                     Telefone = response["telefone"].ToString()
                 };
-                clientes.Add(cliente);
+                garagens.Add(garagem);
             }
-            return clientes;
+            return garagens;
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            dgvGaragens.DataSource = null;
+            dgvGaragens.DataSource = ListAll();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+            dgvGaragens.DataSource = null;
         }
     }
 }

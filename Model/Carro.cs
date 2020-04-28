@@ -10,6 +10,8 @@
         public int AnoFabricacao { get; set; }
         public int AnoModelo { get; set; }
         public Motor Motor { get; set; }
-        public Garagem garagem { get; set; }
+        public Garagem Garagem { get; set; }
+        public string descricaoMotor { get; set; }
+        public string nomeGaragem { get; set; }
     }
 }

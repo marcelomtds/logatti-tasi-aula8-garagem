@@ -32,6 +32,10 @@
             this.gerenciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuFuncionario = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMenuMotor = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMenuCarro = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMenuGaragem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemMenuAtendimento = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +53,11 @@
             // 
             this.gerenciarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemMenuCliente,
-            this.itemMenuFuncionario});
+            this.itemMenuFuncionario,
+            this.itemMenuMotor,
+            this.itemMenuCarro,
+            this.itemMenuGaragem,
+            this.itemMenuAtendimento});
             this.gerenciarToolStripMenuItem.Name = "gerenciarToolStripMenuItem";
             this.gerenciarToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.gerenciarToolStripMenuItem.Text = "Gerenciar";
@@ -67,6 +75,34 @@
             this.itemMenuFuncionario.Size = new System.Drawing.Size(180, 22);
             this.itemMenuFuncionario.Text = "Funcionario";
             this.itemMenuFuncionario.Click += new System.EventHandler(this.itemMenuFuncionario_Click);
+            // 
+            // itemMenuMotor
+            // 
+            this.itemMenuMotor.Name = "itemMenuMotor";
+            this.itemMenuMotor.Size = new System.Drawing.Size(180, 22);
+            this.itemMenuMotor.Text = "Motor";
+            this.itemMenuMotor.Click += new System.EventHandler(this.itemMenuMotor_Click);
+            // 
+            // itemMenuCarro
+            // 
+            this.itemMenuCarro.Name = "itemMenuCarro";
+            this.itemMenuCarro.Size = new System.Drawing.Size(180, 22);
+            this.itemMenuCarro.Text = "Carro";
+            this.itemMenuCarro.Click += new System.EventHandler(this.itemMenuCarro_Click);
+            // 
+            // itemMenuGaragem
+            // 
+            this.itemMenuGaragem.Name = "itemMenuGaragem";
+            this.itemMenuGaragem.Size = new System.Drawing.Size(180, 22);
+            this.itemMenuGaragem.Text = "Garagem";
+            this.itemMenuGaragem.Click += new System.EventHandler(this.itemMenuGaragem_Click);
+            // 
+            // itemMenuAtendimento
+            // 
+            this.itemMenuAtendimento.Name = "itemMenuAtendimento";
+            this.itemMenuAtendimento.Size = new System.Drawing.Size(180, 22);
+            this.itemMenuAtendimento.Text = "Atendimento";
+            this.itemMenuAtendimento.Click += new System.EventHandler(this.itemMenuAtendimento_Click);
             // 
             // MenuForm
             // 
@@ -94,6 +130,10 @@
         private System.Windows.Forms.ToolStripMenuItem gerenciarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemMenuCliente;
         private System.Windows.Forms.ToolStripMenuItem itemMenuFuncionario;
+        private System.Windows.Forms.ToolStripMenuItem itemMenuMotor;
+        private System.Windows.Forms.ToolStripMenuItem itemMenuCarro;
+        private System.Windows.Forms.ToolStripMenuItem itemMenuGaragem;
+        private System.Windows.Forms.ToolStripMenuItem itemMenuAtendimento;
     }
 }
 

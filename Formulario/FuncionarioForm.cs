@@ -88,6 +88,7 @@ namespace Formulario
             txtNome.Clear();
             txtTelefone.Clear();
             txtSalario.Clear();
+            txtNome.Focus();
         }
 
         private List<Funcionario> ReadList(SqlDataReader response)

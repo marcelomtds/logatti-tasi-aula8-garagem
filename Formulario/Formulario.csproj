@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtendimentoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtendimentoForm.Designer.cs">
+      <DependentUpon>AtendimentoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarroForm.Designer.cs">
+      <DependentUpon>CarroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClienteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,22 +70,46 @@
     <Compile Include="FuncionarioForm.Designer.cs">
       <DependentUpon>FuncionarioForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GaragemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaragemForm.Designer.cs">
+      <DependentUpon>GaragemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MotorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotorForm.Designer.cs">
+      <DependentUpon>MotorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AtendimentoForm.resx">
+      <DependentUpon>AtendimentoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarroForm.resx">
+      <DependentUpon>CarroForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FuncionarioForm.resx">
       <DependentUpon>FuncionarioForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GaragemForm.resx">
+      <DependentUpon>GaragemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotorForm.resx">
+      <DependentUpon>MotorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

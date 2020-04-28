@@ -28,6 +28,41 @@ namespace Formulario
             }
         }
 
+        private void itemMenuMotor_Click(object sender, EventArgs e)
+        {
+            if (IsClosedForm("MotorForm"))
+            {
+                MotorForm form = new MotorForm();
+                form.Show();
+            }
+        }
+
+        private void itemMenuCarro_Click(object sender, EventArgs e)
+        {
+            if (IsClosedForm("CarroForm"))
+            {
+                CarroForm form = new CarroForm();
+                form.Show();
+            }
+        }
+
+        private void itemMenuGaragem_Click(object sender, EventArgs e)
+        {
+            if (IsClosedForm("GaragemForm"))
+            {
+                GaragemForm form = new GaragemForm();
+                form.Show();
+            }
+        }
+
+        private void itemMenuAtendimento_Click(object sender, EventArgs e)
+        {
+            if (IsClosedForm("AtendimentoForm"))
+            {
+                AtendimentoForm form = new AtendimentoForm();
+                form.Show();
+            }
+        }
         private Boolean IsClosedForm(string formName)
         {
             FormCollection fc = Application.OpenForms;

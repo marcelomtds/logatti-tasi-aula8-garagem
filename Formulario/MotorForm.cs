@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
 using System.Windows.Forms;
 using Dados;
 using Model;
 
 namespace Formulario
 {
-    public partial class ClienteForm : Form
+    public partial class MotorForm : Form
     {
         private DataBase db;
-        public ClienteForm()
+        public MotorForm()
         {
             InitializeComponent();
         }
@@ -24,14 +23,13 @@ namespace Formulario
             }
             else
             {
-                var cliente = new Cliente
+                var motor = new Motor
                 {
-                    Nome = txtNome.Text,
-                    Telefone = txtTelefone.Text
+                    Descricao = txtDescricao.Text
                 };
                 try
                 {
-                    Save(cliente);
+                    Save(motor);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -44,62 +42,65 @@ namespace Formulario
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            dgvClientes.DataSource = null;
-            dgvClientes.DataSource = ListAll();
+            dgvMotores.DataSource = null;
+            dgvMotores.DataSource = ListAll();
+            FormatColumns();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             ResetForm();
-            dgvClientes.DataSource = null;
+            dgvMotores.DataSource = null;
         }
 
-        private void Save(Cliente cliente)
+        private void Save(Motor motor)
         {
-            var sql = $"INSERT INTO CLIENTE (nome, telefone) VALUES ('{cliente.Nome}', '{cliente.Telefone}')";
+            var sql = $"INSERT INTO MOTOR (descricao) VALUES ('{motor.Descricao}')";
             using (db = new DataBase())
             {
                 db.ExecuteCommand(sql);
             }
         }
 
-        private List<Cliente> ListAll()
+        private List<Motor> ListAll()
         {
             using (db = new DataBase())
             {
-                var sql = "SELECT id, nome, telefone FROM CLIENTE ORDER BY nome ASC";
+                var sql = "SELECT id, descricao FROM MOTOR ORDER BY descricao ASC";
                 var retorno = db.ExecuteCommandWithReturn(sql);
                 return ReadList(retorno);
             }
         }
-
         private bool IsInvalidForm()
         {
-            return string.IsNullOrWhiteSpace(txtNome.Text) || string.IsNullOrWhiteSpace(txtTelefone.Text);
+            return string.IsNullOrWhiteSpace(txtDescricao.Text);
         }
 
         private void ResetForm()
         {
             txtId.Clear();
-            txtNome.Clear();
-            txtTelefone.Clear();
-            txtNome.Focus();
+            txtDescricao.Clear();
+            txtDescricao.Focus();
         }
 
-        private List<Cliente> ReadList(SqlDataReader response)
+        private List<Motor> ReadList(SqlDataReader response)
         {
-            List<Cliente> clientes = new List<Cliente>();
+            List<Motor> motores = new List<Motor>();
             while (response.Read())
             {
-                var cliente = new Cliente()
+                var motor = new Motor()
                 {
                     Id = Convert.ToInt32(response["id"]),
-                    Nome = response["nome"].ToString(),
-                    Telefone = response["telefone"].ToString()
+                    Descricao = response["descricao"].ToString(),
                 };
-                clientes.Add(cliente);
+                motores.Add(motor);
             }
-            return clientes;
+            return motores;
+        }
+
+        private void FormatColumns()
+        {
+            dgvMotores.Columns["Descricao"].HeaderText = "Descrição";
         }
     }
 }

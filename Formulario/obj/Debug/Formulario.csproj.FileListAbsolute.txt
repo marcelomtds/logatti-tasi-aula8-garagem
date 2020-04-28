@@ -14,3 +14,7 @@ C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Model.pdb
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.csproj.CopyComplete
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.MenuForm.resources
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.FuncionarioForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.MotorForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.CarroForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.GaragemForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.AtendimentoForm.resources
