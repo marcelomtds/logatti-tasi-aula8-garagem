@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using Dados;
 using Model;
+using Persistence;
 
 namespace Formulario
 {
     public partial class MotorForm : Form
     {
-        private DataBase db;
+        private MotorPersistence mp = new MotorPersistence();
+
         public MotorForm()
         {
             InitializeComponent();
@@ -29,7 +28,7 @@ namespace Formulario
                 };
                 try
                 {
-                    Save(motor);
+                    mp.Create(motor);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -43,7 +42,7 @@ namespace Formulario
         private void btnListar_Click(object sender, EventArgs e)
         {
             dgvMotores.DataSource = null;
-            dgvMotores.DataSource = ListAll();
+            dgvMotores.DataSource = mp.ListAll();
             FormatColumns();
         }
 
@@ -53,24 +52,6 @@ namespace Formulario
             dgvMotores.DataSource = null;
         }
 
-        private void Save(Motor motor)
-        {
-            var sql = $"INSERT INTO MOTOR (descricao) VALUES ('{motor.Descricao}')";
-            using (db = new DataBase())
-            {
-                db.ExecuteCommand(sql);
-            }
-        }
-
-        private List<Motor> ListAll()
-        {
-            using (db = new DataBase())
-            {
-                var sql = "SELECT id, descricao FROM MOTOR ORDER BY descricao ASC";
-                var retorno = db.ExecuteCommandWithReturn(sql);
-                return ReadList(retorno);
-            }
-        }
         private bool IsInvalidForm()
         {
             return string.IsNullOrWhiteSpace(txtDescricao.Text);
@@ -82,22 +63,6 @@ namespace Formulario
             txtDescricao.Clear();
             txtDescricao.Focus();
         }
-
-        private List<Motor> ReadList(SqlDataReader response)
-        {
-            List<Motor> motores = new List<Motor>();
-            while (response.Read())
-            {
-                var motor = new Motor()
-                {
-                    Id = Convert.ToInt32(response["id"]),
-                    Descricao = response["descricao"].ToString(),
-                };
-                motores.Add(motor);
-            }
-            return motores;
-        }
-
         private void FormatColumns()
         {
             dgvMotores.Columns["Descricao"].HeaderText = "Descrição";

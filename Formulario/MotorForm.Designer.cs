@@ -46,25 +46,25 @@
             // gbMotores
             // 
             this.gbMotores.Controls.Add(this.dgvMotores);
-            this.gbMotores.Location = new System.Drawing.Point(12, 175);
+            this.gbMotores.Location = new System.Drawing.Point(12, 150);
             this.gbMotores.Name = "gbMotores";
             this.gbMotores.Size = new System.Drawing.Size(417, 215);
             this.gbMotores.TabIndex = 9;
             this.gbMotores.TabStop = false;
             this.gbMotores.Text = "Motores";
             // 
-            // dgvClientes
+            // dgvMotores
             // 
             this.dgvMotores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMotores.Location = new System.Drawing.Point(9, 19);
-            this.dgvMotores.Name = "dgvClientes";
+            this.dgvMotores.Name = "dgvMotores";
             this.dgvMotores.ReadOnly = true;
             this.dgvMotores.Size = new System.Drawing.Size(402, 190);
             this.dgvMotores.TabIndex = 5;
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(354, 146);
+            this.btnLimpar.Location = new System.Drawing.Point(354, 121);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 8;
@@ -74,7 +74,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(93, 146);
+            this.btnListar.Location = new System.Drawing.Point(93, 121);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 7;
@@ -84,7 +84,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 146);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 121);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 6;
@@ -100,7 +100,7 @@
             this.gbDados.Controls.Add(this.txtId);
             this.gbDados.Location = new System.Drawing.Point(12, 12);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(417, 128);
+            this.gbDados.Size = new System.Drawing.Size(417, 103);
             this.gbDados.TabIndex = 5;
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados";
@@ -108,7 +108,7 @@
             // lblDescricao
             // 
             this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(6, 75);
+            this.lblDescricao.Location = new System.Drawing.Point(6, 55);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(62, 13);
             this.lblDescricao.TabIndex = 3;
@@ -116,7 +116,8 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(6, 91);
+            this.txtDescricao.Location = new System.Drawing.Point(9, 71);
+            this.txtDescricao.MaxLength = 100;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(325, 20);
             this.txtDescricao.TabIndex = 2;
@@ -124,7 +125,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 27);
+            this.lblId.Location = new System.Drawing.Point(6, 16);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 1;
@@ -133,7 +134,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(6, 43);
+            this.txtId.Location = new System.Drawing.Point(9, 32);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
@@ -142,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 401);
+            this.ClientSize = new System.Drawing.Size(441, 374);
             this.Controls.Add(this.gbMotores);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnListar);

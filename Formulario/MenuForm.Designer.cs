@@ -73,7 +73,7 @@
             // 
             this.itemMenuFuncionario.Name = "itemMenuFuncionario";
             this.itemMenuFuncionario.Size = new System.Drawing.Size(180, 22);
-            this.itemMenuFuncionario.Text = "Funcionario";
+            this.itemMenuFuncionario.Text = "Funcionário";
             this.itemMenuFuncionario.Click += new System.EventHandler(this.itemMenuFuncionario_Click);
             // 
             // itemMenuMotor

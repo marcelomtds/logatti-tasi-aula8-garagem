@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Globalization;
 using System.Windows.Forms;
-using Dados;
 using Model;
+using Persistence;
 
 namespace Formulario
 {
     public partial class FuncionarioForm : Form
     {
-        private DataBase db;
+        private FuncionarioPersistence fp = new FuncionarioPersistence();
         public FuncionarioForm()
         {
             InitializeComponent();
@@ -30,9 +27,9 @@ namespace Formulario
                     {
                         Nome = txtNome.Text,
                         Telefone = txtTelefone.Text,
-                        Salario = Convert.ToDecimal(txtSalario.Text.ToString())
+                        Salario = decimal.Parse(txtSalario.Text.ToString())
                     };
-                    Save(funcionario);
+                    fp.Create(funcionario);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -52,27 +49,8 @@ namespace Formulario
         private void btnListar_Click(object sender, EventArgs e)
         {
             dgvFuncionarios.DataSource = null;
-            dgvFuncionarios.DataSource = ListAll();
+            dgvFuncionarios.DataSource = fp.ListAll();
             FormatColumns();
-        }
-
-        private void Save(Funcionario funcionario)
-        {
-            var sql = $"INSERT INTO FUNCIONARIO (nome, telefone, salario) VALUES ('{funcionario.Nome}', '{funcionario.Telefone}', '{funcionario.Salario.ToString(CultureInfo.CreateSpecificCulture("en-US"))}')";
-            using (db = new DataBase())
-            {
-                db.ExecuteCommand(sql);
-            }
-        }
-
-        private List<Funcionario> ListAll()
-        {
-            using (db = new DataBase())
-            {
-                var sql = "SELECT id, nome, telefone, salario FROM FUNCIONARIO ORDER BY nome ASC";
-                var retorno = db.ExecuteCommandWithReturn(sql);
-                return ReadList(retorno);
-            }
         }
 
         private bool IsInvalidForm()
@@ -89,23 +67,6 @@ namespace Formulario
             txtTelefone.Clear();
             txtSalario.Clear();
             txtNome.Focus();
-        }
-
-        private List<Funcionario> ReadList(SqlDataReader response)
-        {
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            while (response.Read())
-            {
-                var funcionario = new Funcionario()
-                {
-                    Id = Convert.ToInt32(response["id"]),
-                    Nome = response["nome"].ToString(),
-                    Telefone = response["telefone"].ToString(),
-                    Salario = Convert.ToDecimal(response["salario"].ToString())
-                };
-                funcionarios.Add(funcionario);
-            }
-            return funcionarios;
         }
 
         private void FormatColumns()

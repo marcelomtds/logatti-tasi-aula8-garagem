@@ -50,7 +50,7 @@
             // gbAtendimento
             // 
             this.gbAtendimento.Controls.Add(this.dgvAtendimentos);
-            this.gbAtendimento.Location = new System.Drawing.Point(12, 241);
+            this.gbAtendimento.Location = new System.Drawing.Point(12, 228);
             this.gbAtendimento.Name = "gbAtendimento";
             this.gbAtendimento.Size = new System.Drawing.Size(648, 221);
             this.gbAtendimento.TabIndex = 14;
@@ -68,7 +68,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(585, 212);
+            this.btnLimpar.Location = new System.Drawing.Point(585, 199);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 13;
@@ -78,7 +78,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(93, 212);
+            this.btnListar.Location = new System.Drawing.Point(93, 199);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 12;
@@ -88,7 +88,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 212);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 199);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 11;
@@ -109,22 +109,22 @@
             this.gbDados.ForeColor = System.Drawing.Color.Black;
             this.gbDados.Location = new System.Drawing.Point(12, 12);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(648, 194);
+            this.gbDados.Size = new System.Drawing.Size(648, 181);
             this.gbDados.TabIndex = 10;
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados";
             // 
             // dtpData
             // 
-            this.dtpData.Location = new System.Drawing.Point(6, 162);
+            this.dtpData.Location = new System.Drawing.Point(11, 151);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(343, 20);
+            this.dtpData.Size = new System.Drawing.Size(319, 20);
             this.dtpData.TabIndex = 21;
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(6, 146);
+            this.lblData.Location = new System.Drawing.Point(8, 135);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(37, 13);
             this.lblData.TabIndex = 20;
@@ -133,15 +133,15 @@
             // cmbCarro
             // 
             this.cmbCarro.FormattingEnabled = true;
-            this.cmbCarro.Location = new System.Drawing.Point(6, 122);
+            this.cmbCarro.Location = new System.Drawing.Point(9, 111);
             this.cmbCarro.Name = "cmbCarro";
-            this.cmbCarro.Size = new System.Drawing.Size(343, 21);
+            this.cmbCarro.Size = new System.Drawing.Size(410, 21);
             this.cmbCarro.TabIndex = 18;
             // 
             // lblCarro
             // 
             this.lblCarro.AutoSize = true;
-            this.lblCarro.Location = new System.Drawing.Point(6, 106);
+            this.lblCarro.Location = new System.Drawing.Point(6, 95);
             this.lblCarro.Name = "lblCarro";
             this.lblCarro.Size = new System.Drawing.Size(39, 13);
             this.lblCarro.TabIndex = 17;
@@ -150,15 +150,15 @@
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(6, 82);
+            this.cmbCliente.Location = new System.Drawing.Point(9, 71);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(343, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(410, 21);
             this.cmbCliente.TabIndex = 16;
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(6, 66);
+            this.lblCliente.Location = new System.Drawing.Point(6, 55);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(46, 13);
             this.lblCliente.TabIndex = 15;
@@ -167,7 +167,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 27);
+            this.lblId.Location = new System.Drawing.Point(6, 16);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 1;
@@ -176,7 +176,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(6, 43);
+            this.txtId.Location = new System.Drawing.Point(9, 32);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 471);
+            this.ClientSize = new System.Drawing.Size(672, 457);
             this.Controls.Add(this.gbAtendimento);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnLimpar);

@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using Dados;
 using Model;
+using Persistence;
 
 namespace Formulario
 {
     public partial class GaragemForm : Form
     {
-        private DataBase db;
+        private GaragemPersistence gp = new GaragemPersistence();
         public GaragemForm()
         {
             InitializeComponent();
@@ -31,7 +29,7 @@ namespace Formulario
                 };
                 try
                 {
-                    Save(garagem);
+                    gp.Create(garagem);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -42,29 +40,10 @@ namespace Formulario
             }
         }
 
-        private void Save(Garagem garagem)
-        {
-            var sql = $"INSERT INTO garagem (cnpj, nome, telefone) VALUES ('{garagem.CNPJ}', '{garagem.Nome}', '{garagem.Telefone}')";
-            using (db = new DataBase())
-            {
-                db.ExecuteCommand(sql);
-            }
-        }
-
-        private List<Garagem> ListAll()
-        {
-            using (db = new DataBase())
-            {
-                var sql = "SELECT id, cnpj, nome, telefone FROM garagem ORDER BY nome ASC";
-                var retorno = db.ExecuteCommandWithReturn(sql);
-                return ReadList(retorno);
-            }
-        }
-
         private bool IsInvalidForm()
         {
             return string.IsNullOrWhiteSpace(txtCNPJ.Text)
-                || string.IsNullOrWhiteSpace(txtTelefone.Text)
+                || string.IsNullOrWhiteSpace(txtNome.Text)
                 || string.IsNullOrWhiteSpace(txtTelefone.Text);
         }
 
@@ -77,27 +56,10 @@ namespace Formulario
             txtCNPJ.Focus();
         }
 
-        private List<Garagem> ReadList(SqlDataReader response)
-        {
-            List<Garagem> garagens = new List<Garagem>();
-            while (response.Read())
-            {
-                var garagem = new Garagem()
-                {
-                    Id = Convert.ToInt32(response["id"]),
-                    CNPJ = response["cnpj"].ToString(),
-                    Nome = response["nome"].ToString(),
-                    Telefone = response["telefone"].ToString()
-                };
-                garagens.Add(garagem);
-            }
-            return garagens;
-        }
-
         private void btnListar_Click(object sender, EventArgs e)
         {
             dgvGaragens.DataSource = null;
-            dgvGaragens.DataSource = ListAll();
+            dgvGaragens.DataSource = gp.ListAll();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

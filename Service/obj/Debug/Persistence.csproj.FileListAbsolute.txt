@@ -1,0 +1,10 @@
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Service.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Service.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Dados.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Model.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Dados.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Service\bin\Debug\Model.pdb
+C:\projetos\logatti\csharp\Aula8Garagem\Service\obj\Debug\Persistence.csprojAssemblyReference.cache
+C:\projetos\logatti\csharp\Aula8Garagem\Service\obj\Debug\Persistence.csproj.CopyComplete
+C:\projetos\logatti\csharp\Aula8Garagem\Service\obj\Debug\Service.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Service\obj\Debug\Service.pdb

@@ -18,3 +18,5 @@ C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.MotorFor
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.CarroForm.resources
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.GaragemForm.resources
 C:\projetos\logatti\csharp\Aula8Garagem\Formulario\obj\Debug\Formulario.AtendimentoForm.resources
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Service.dll
+C:\projetos\logatti\csharp\Aula8Garagem\Formulario\bin\Debug\Service.pdb

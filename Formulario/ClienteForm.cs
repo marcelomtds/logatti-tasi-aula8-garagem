@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Text;
 using System.Windows.Forms;
-using Dados;
 using Model;
+using Persistence;
 
 namespace Formulario
 {
     public partial class ClienteForm : Form
     {
-        private DataBase db;
+        private ClientePersistence cp = new ClientePersistence();
         public ClienteForm()
         {
             InitializeComponent();
@@ -31,7 +28,7 @@ namespace Formulario
                 };
                 try
                 {
-                    Save(cliente);
+                    cp.Create(cliente);
                     MessageBox.Show("Registro salvo com sucesso.");
                     ResetForm();
                 }
@@ -45,32 +42,13 @@ namespace Formulario
         private void btnListar_Click(object sender, EventArgs e)
         {
             dgvClientes.DataSource = null;
-            dgvClientes.DataSource = ListAll();
+            dgvClientes.DataSource = cp.ListAll();
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             ResetForm();
             dgvClientes.DataSource = null;
-        }
-
-        private void Save(Cliente cliente)
-        {
-            var sql = $"INSERT INTO CLIENTE (nome, telefone) VALUES ('{cliente.Nome}', '{cliente.Telefone}')";
-            using (db = new DataBase())
-            {
-                db.ExecuteCommand(sql);
-            }
-        }
-
-        private List<Cliente> ListAll()
-        {
-            using (db = new DataBase())
-            {
-                var sql = "SELECT id, nome, telefone FROM CLIENTE ORDER BY nome ASC";
-                var retorno = db.ExecuteCommandWithReturn(sql);
-                return ReadList(retorno);
-            }
         }
 
         private bool IsInvalidForm()
@@ -84,22 +62,6 @@ namespace Formulario
             txtNome.Clear();
             txtTelefone.Clear();
             txtNome.Focus();
-        }
-
-        private List<Cliente> ReadList(SqlDataReader response)
-        {
-            List<Cliente> clientes = new List<Cliente>();
-            while (response.Read())
-            {
-                var cliente = new Cliente()
-                {
-                    Id = Convert.ToInt32(response["id"]),
-                    Nome = response["nome"].ToString(),
-                    Telefone = response["telefone"].ToString()
-                };
-                clientes.Add(cliente);
-            }
-            return clientes;
         }
     }
 }

@@ -50,9 +50,9 @@
             // gbFuncionario
             // 
             this.gbFuncionario.Controls.Add(this.dgvFuncionarios);
-            this.gbFuncionario.Location = new System.Drawing.Point(12, 223);
+            this.gbFuncionario.Location = new System.Drawing.Point(12, 189);
             this.gbFuncionario.Name = "gbFuncionario";
-            this.gbFuncionario.Size = new System.Drawing.Size(484, 215);
+            this.gbFuncionario.Size = new System.Drawing.Size(416, 215);
             this.gbFuncionario.TabIndex = 9;
             this.gbFuncionario.TabStop = false;
             this.gbFuncionario.Text = "Funcionários";
@@ -63,12 +63,12 @@
             this.dgvFuncionarios.Location = new System.Drawing.Point(9, 19);
             this.dgvFuncionarios.Name = "dgvFuncionarios";
             this.dgvFuncionarios.ReadOnly = true;
-            this.dgvFuncionarios.Size = new System.Drawing.Size(469, 190);
+            this.dgvFuncionarios.Size = new System.Drawing.Size(401, 190);
             this.dgvFuncionarios.TabIndex = 5;
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(415, 194);
+            this.btnLimpar.Location = new System.Drawing.Point(353, 160);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 8;
@@ -78,7 +78,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(93, 193);
+            this.btnListar.Location = new System.Drawing.Point(93, 160);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 7;
@@ -88,7 +88,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(12, 193);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 160);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 6;
@@ -108,7 +108,7 @@
             this.gbDados.Controls.Add(this.txtId);
             this.gbDados.Location = new System.Drawing.Point(12, 12);
             this.gbDados.Name = "gbDados";
-            this.gbDados.Size = new System.Drawing.Size(484, 174);
+            this.gbDados.Size = new System.Drawing.Size(416, 142);
             this.gbDados.TabIndex = 5;
             this.gbDados.TabStop = false;
             this.gbDados.Text = "Dados";
@@ -116,7 +116,7 @@
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(184, 123);
+            this.lblSalario.Location = new System.Drawing.Point(159, 94);
             this.lblSalario.Name = "lblSalario";
             this.lblSalario.Size = new System.Drawing.Size(46, 13);
             this.lblSalario.TabIndex = 7;
@@ -124,15 +124,16 @@
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(184, 139);
+            this.txtSalario.Location = new System.Drawing.Point(162, 110);
+            this.txtSalario.MaxLength = 8;
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(147, 20);
+            this.txtSalario.Size = new System.Drawing.Size(172, 20);
             this.txtSalario.TabIndex = 6;
             // 
             // lblTelefone
             // 
             this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Location = new System.Drawing.Point(6, 123);
+            this.lblTelefone.Location = new System.Drawing.Point(6, 94);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(56, 13);
             this.lblTelefone.TabIndex = 5;
@@ -140,15 +141,16 @@
             // 
             // txtTelefone
             // 
-            this.txtTelefone.Location = new System.Drawing.Point(6, 139);
+            this.txtTelefone.Location = new System.Drawing.Point(9, 110);
+            this.txtTelefone.MaxLength = 15;
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(150, 20);
+            this.txtTelefone.Size = new System.Drawing.Size(147, 20);
             this.txtTelefone.TabIndex = 4;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(6, 75);
+            this.lblNome.Location = new System.Drawing.Point(6, 55);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(42, 13);
             this.lblNome.TabIndex = 3;
@@ -156,7 +158,8 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(6, 91);
+            this.txtNome.Location = new System.Drawing.Point(9, 71);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(325, 20);
             this.txtNome.TabIndex = 2;
@@ -164,7 +167,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(6, 27);
+            this.lblId.Location = new System.Drawing.Point(6, 16);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 1;
@@ -173,7 +176,7 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(6, 43);
+            this.txtId.Location = new System.Drawing.Point(9, 32);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 0;
@@ -182,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 450);
+            this.ClientSize = new System.Drawing.Size(440, 412);
             this.Controls.Add(this.gbFuncionario);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnListar);
